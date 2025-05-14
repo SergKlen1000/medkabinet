@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Огляд офтальмолога — МедКабінет</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 2rem;
+    }
+    .form-section {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    textarea {
+      min-height: 100px;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-section">
+    <h2>Огляд офтальмолога</h2>
+    <form>
+      <label>Пацієнт:</label>
+      <input type="text" name="patient_name" value="Іванов Іван" readonly>
+
+      <label>Дата народження:</label>
+      <input type="date" name="birth_date" value="1985-04-20" readonly>
+
+      <label>Дата огляду:</label>
+      <input type="date" name="visit_date" value="2025-05-14">
+
+      <label>Скарги:</label>
+      <textarea name="complaints"></textarea>
+
+      <label>Дані огляду:</label>
+      <textarea name="examination"></textarea>
+
+      <label>Діагноз:</label>
+      <textarea name="diagnosis"></textarea>
+
+      <label>Призначення:</label>
+      <textarea name="treatment"></textarea>
+
+      <label>Висновок:</label>
+      <textarea name="conclusion"></textarea>
+
+      <button type="submit">Зберегти</button>
+    </form>
+  </div>
+</body>
+</html>

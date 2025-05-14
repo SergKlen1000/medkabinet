@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Реєстрація лікаря — МедКабінет</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.7rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>МедКабінет</h1>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="login.html">Вхід</a>
+      <a href="register.html">Реєстрація</a>
+    </nav>
+  </header>
+
+  <main>
+    <form>
+      <h2>Реєстрація лікаря</h2>
+      <label>Прізвище та ім'я:
+        <input type="text" name="full_name" required>
+      </label>
+      <label>Спеціалізація:
+        <select name="specialty" required>
+          <option value="">Оберіть...</option>
+          <option value="гинеколог">Гінеколог</option>
+          <option value="травматолог">Травматолог</option>
+          <option value="офтальмолог">Офтальмолог</option>
+          <option value="терапевт">Терапевт</option>
+          <option value="стоматолог">Стоматолог</option>
+          <option value="педіатр">Педіатр</option>
+          <option value="уролог">Уролог</option>
+          <option value="інше">Інше</option>
+        </select>
+      </label>
+      <label>Email:
+        <input type="email" name="email" required>
+      </label>
+      <label>Пароль:
+        <input type="password" name="password" required>
+      </label>
+      <button type="submit">Зареєструватися</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 МедКабінет. Усі права захищено.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Реєстрація — МедКабінет</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    h2 {
+      margin-bottom: 2rem;
+    }
+    .role-selection {
+      display: flex;
+      gap: 2rem;
+    }
+    .role-selection a {
+      padding: 1rem 2rem;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>МедКабінет</h1>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="login.html">Вхід</a>
+      <a href="register.html">Реєстрація</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Оберіть тип користувача</h2>
+    <div class="role-selection">
+      <a href="register_doctor.html">Лікар</a>
+      <a href="register_patient.html">Пацієнт</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 МедКабінет. Усі права захищено.
+  </footer>
+</body>
+</html>

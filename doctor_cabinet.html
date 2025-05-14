@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кабінет лікаря — МедКабінет</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+    main {
+      padding: 2rem;
+    }
+    .template-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .template-list a {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #007bff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #ddd;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Кабінет лікаря</h1>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="logout.html">Вийти</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Ласкаво просимо, <span id="doctorName">Лікар</span>!</h2>
+    <p>Спеціальність: <span id="specialty">---</span></p>
+    <div class="template-list">
+      <a href="oftalmology_visit.html">Огляд офтальмолога</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 МедКабінет
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    const specialty = params.get('specialty');
+    if (name) document.getElementById('doctorName').textContent = name;
+    if (specialty) document.getElementById('specialty').textContent = specialty;
+  </script>
+</body>
+</html>

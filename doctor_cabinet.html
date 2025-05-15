@@ -22,27 +22,33 @@
     header h1 {
       margin: 0;
     }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
     main {
       padding: 2rem;
     }
     .info {
       background-color: white;
-      padding: 1rem;
+      padding: 1rem 2rem;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       max-width: 600px;
       margin-bottom: 2rem;
     }
-    .template-link {
+    .button {
       display: inline-block;
-      margin-top: 1rem;
-      padding: 0.7rem 1.2rem;
+      padding: 12px 20px;
       background-color: #007bff;
       color: white;
       text-decoration: none;
       border-radius: 5px;
+      font-size: 1rem;
+      margin-top: 1rem;
     }
-    .template-link:hover {
+    .button:hover {
       background-color: #0056b3;
     }
   </style>
@@ -51,15 +57,16 @@
   <header>
     <h1>МедКабінет</h1>
     <nav>
-      <a href="index.html" style="color:white; text-decoration: none;">Вийти</a>
+      <a href="index.html">🏠 Головна</a>
+      <a href="#">Вийти</a>
     </nav>
   </header>
 
   <main>
     <div class="info">
       <h2 id="doctorName">Ласкаво просимо, лікар!</h2>
-      <p id="doctorSpecialty">Спеціальність: </p>
-      <a href="oftalmology_visit.html" class="template-link">📝 Перейти до шаблону огляду</a>
+      <p id="doctorSpecialty">Спеціальність: —</p>
+      <a href="oftalmology_visit.html" class="button">📝 Створити огляд офтальмолога</a>
     </div>
   </main>
 
@@ -67,13 +74,8 @@
     const params = new URLSearchParams(window.location.search);
     const name = params.get('name');
     const specialty = params.get('specialty');
-
-    if (name) {
-      document.getElementById('doctorName').textContent = `Ласкаво просимо, ${name}!`;
-    }
-    if (specialty) {
-      document.getElementById('doctorSpecialty').textContent = `Спеціальність: ${specialty}`;
-    }
+    if (name) document.getElementById('doctorName').textContent = `Ласкаво просимо, ${name}!`;
+    if (specialty) document.getElementById('doctorSpecialty').textContent = `Спеціальність: ${specialty}`;
   </script>
 </body>
 </html>
